@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table,th,td {border: 1px solid black;}
+    </style>
+    <meta charset="UTF-8">
+    <title>Stroke Dataset</title>
+</head>
+<body style="background-color: CornflowerBlue;">
+    <center>
+        <img src="../static/image2.jpg" width="200" height="200">
+
+        <h1>
+          Prediction whether the patient will have stroke or not
+        </h1>
+        <form action= "{{ url_for('predict') }}" method="post" >
+            <div class = "form-grp"><input type="text" name = 'gender' placeholder="Enter the gender"><br></div>
+            <input type="text" name = 'age' placeholder="Enter the age"><br>
+            <input type="text" name = 'hypertension' placeholder="Enter the hypertension"><br>
+            <input type="text" name = 'heart_disease' placeholder="Enter the heart disease"><br>
+            <input type="text" name = 'married' placeholder="Married or not"><br>
+            <input type="text" name = 'work_type' placeholder="What is the work type"><br>
+            <input type="text" name = 'Residence_type' placeholder="Have Residence or not"><br>
+            <input type="text" name = 'avg_glucose_level' placeholder="Enter Average glucose level"><br>
+            <input type="text" name = 'bmi' placeholder="Enter the BMI"><br>
+            <input type="text" name = 'smoking_status' placeholder="Enter the status of smoking"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </center>
+    <table style="width:80%">
+  <caption>Values Information</caption>
+  <thead>
+    <tr>
+      <td> </td>
+      <th scope="col">Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Gender</th>
+      <td>0-Female  1-Male</td>
+    </tr>
+    <tr>
+      <th scope="row">Hypertension</th>
+      <td>1-YES  0-NO</td>
+    </tr>
+    <tr>
+      <th scope="row">Heart_disease</th>
+      <td>1-YES  0-NO</td>
+    </tr>
+    <tr>
+      <th scope="row">Married</th>
+      <td>1-YES  0-NO</td>
+    </tr>
+    <tr>
+      <th scope="row">Work_type</th>
+      <td>0-Government  1-Never worked  2-Private  3-Self Employed  4-Children</td>
+    </tr>
+    <tr>
+      <th scope="row">Residence</th>
+      <td>1-Urban  0-Rural</td>
+    </tr>
+    <tr>
+      <th scope="row">Smoking_status</th>
+      <td>0-Unknown  1-Formerly smoked  2-Never Smoked  3-Smokes</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
